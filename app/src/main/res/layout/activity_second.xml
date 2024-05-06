@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/assignment_2_ui"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity">
+
+    <ImageView
+        android:id="@+id/petImageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/your_pet_image" />
+
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/petImageView"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/feedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:backgroundTint="#55E407"
+            android:text="Feed" />
+
+        <Button
+            android:id="@+id/cleanButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:backgroundTint="#54E91E"
+            android:text="Clean" />
+
+        <Button
+            android:id="@+id/playButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:backgroundTint="#5EE118"
+            android:text="Play" />
+    </LinearLayout>
+
+    <!-- Progress Bars -->
+    <LinearLayout
+        android:id="@+id/progressBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonLayout"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/fedLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hunger"
+            android:textColor="#FDFDFD"
+            android:textSize="16sp" />
+
+        <ProgressBar
+            android:id="@+id/progressBarFed"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FDFCFC"
+            android:max="100"
+            android:progress="100"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/happyLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Happy"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <ProgressBar
+            android:id="@+id/progressBarHappy"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#EFEAEA"
+            android:max="100"
+            android:progress="100"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/cleanLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Clean"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <ProgressBar
+            android:id="@+id/progressBarClean"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#E6DFDF"
+            android:max="100"
+            android:progress="100"
+            android:layout_marginTop="8dp"/>
+
+    </LinearLayout>
+
+    <!-- ImageView for Dying Pet -->
+    <ImageView
+        android:id="@+id/deathImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:src="@drawable/pet_dying_image" />
+
+</RelativeLayout>
